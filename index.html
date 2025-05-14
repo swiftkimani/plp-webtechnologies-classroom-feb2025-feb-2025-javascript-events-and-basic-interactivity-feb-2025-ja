@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Carnival 🎪</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the JavaScript Carnival! 🎡</h1>
+        <p>Where code meets fun and learning becomes an adventure!</p>
+    </header>
+
+    <main>
+        <!-- Event Handling Midway -->
+        <section class="carnival-midway" id="event-games">
+            <div class="game-booth" id="click-booth">
+                <h3>Balloon Pop</h3>
+                <p>Click to pop the balloon!</p>
+                <button id="pop-balloon" class="carnival-btn">
+                    <i class="fas fa-hand-pointer"></i> POP IT!
+                </button>
+                <div class="balloon-animation"></div>
+            </div>
+
+            <div class="game-booth" id="hover-booth">
+                <h3>Mystery Prize</h3>
+                <p>Hover to reveal your prize!</p>
+                <div class="mystery-box">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <p class="prize-reveal"></p>
+            </div>
+
+            <div class="game-booth" id="keypress-booth">
+                <h3>Keyboard Magic</h3>
+                <p>Type something magical!</p>
+                <input type="text" placeholder="Start typing...">
+                <div class="magic-reaction"></div>
+            </div>
+
+            <div class="game-booth" id="secret-booth">
+                <h3>Secret Surprise</h3>
+                <p>Double-click here!</p>
+                <div class="secret-area">
+                    <i class="fas fa-question"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Elements Arcade -->
+        <section class="carnival-arcade">
+            <div class="attraction" id="color-changer">
+                <h3>Rainbow Generator</h3>
+                <button id="rainbow-btn" class="carnival-btn">
+                    <i class="fas fa-palette"></i> TOGGLE RAINBOW
+                </button>
+                <div class="color-preview"></div>
+            </div>
+
+            <div class="attraction" id="photo-gallery">
+                <h3>Carnival Memory Lane</h3>
+                <div class="gallery-container">
+                    <div class="gallery-slide active">
+                        <img src="https://images.pexels.com/photos/31596551/pexels-photo-31596551/free-photo-of-winter-scene-with-lake-view-in-van-turkiye.jpeg"
+                            alt="Winter carnival scene">
+                        <div class="image-caption">Winter Wonderland Carnival</div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg"
+                            alt="Ferris wheel at night">
+                        <div class="image-caption">Nighttime Ferris Wheel</div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg"
+                            alt="Carousel horses">
+                        <div class="image-caption">Vintage Carousel</div>
+                    </div>
+                    <button class="gallery-prev" aria-label="Previous image">❮</button>
+                    <button class="gallery-next" aria-label="Next image">❯</button>
+                </div>
+                <div class="gallery-indicators">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                    <span class="indicator" data-index="2"></span>
+                </div>
+            </div>
+
+            <div class="attraction" id="accordion-ride">
+                <h3>FAQ Rollercoaster</h3>
+                <div class="accordion-item">
+                    <button class="accordion-btn">
+                        <span>How does this carnival work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Each attraction at our JavaScript Carnival demonstrates different web development concepts in
+                            a fun,
+                            interactive way! You'll learn about event handling, DOM manipulation, and form validation
+                            while playing
+                            games.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">
+                        <span>Can I win real prizes?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>While the prizes here are virtual, the coding skills you'll gain are absolutely real! Think
+                            of each
+                            successful interaction as leveling up your developer abilities.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">
+                        <span>What technologies are used?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>This carnival runs on pure HTML, CSS, and JavaScript magic! No frameworks or libraries
+                            required - just
+                            foundational web technologies working together.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Validation Ticket Booth -->
+        <section class="ticket-booth">
+            <h2>🎟️ Win Carnival Tickets!</h2>
+            <p>Fill out the form correctly to claim your prize</p>
+
+            <form id="ticket-form">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Name (required):</label>
+                    <input type="text" id="name" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                    <input type="email" id="email">
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> Create Password (8+ chars):</label>
+                    <input type="password" id="password">
+                    <span class="error-message"></span>
+                    <div class="strength-meter"></div>
+                </div>
+
+                <button type="submit" class="carnival-btn">
+                    <i class="fas fa-ticket-alt"></i> CLAIM YOUR PRIZE!
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
